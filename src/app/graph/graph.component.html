@@ -1,0 +1,28 @@
+<app-header></app-header>
+<h2 class="slide-up" style="text-align: center;">Graph for the past 7 days</h2>
+<div class="wrapper">
+  <div *ngIf="isLoading" class="loading">Loading...</div>
+  <div *ngIf="!isLoading && getimg && getimg.length > 0" class="chart-container-wrapper">
+    <div *ngFor="let img of getimg" class="chart-and-image-container">
+      <div class="chart-container">
+        <h2 style="margin-top: 20px; text-align: center;">{{ img.name }}</h2>
+        <canvas [id]="'myChart' + img.sid" #chartCanvas></canvas>
+      </div>
+      <div class="image-container">
+        <img class="image-item" src="{{img.Image}}" alt="" loading="lazy">
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- <div *ngIf="!isLoading && (User && getimg.length === 0)" class="centered-content">
+  <h1 class="slide-up-text" style="font-size: 20px;">The user does not have any photos yet. Please add images before voting graph data is available.</h1><br>
+  <h1> Go to your profile page to add a photo.</h1>
+   <button routerLink="/profile" class="slide-up-button">Go to Profile </button>
+</div>
+
+<div *ngIf="!isLoading && (!User || User.length === 0)" class="centered-content">
+  <h1 class="slide-up-text" style="font-size: 20px;">User has not logged in yet. Please log in first to view the graph page.</h1>
+   <button routerLink="/login" class="slide-up-button">Go to Login</button>
+</div> -->

@@ -1,0 +1,31 @@
+<div class="nav">
+    <ng-container *ngIf="this.user.length; else noHome">
+        <a routerLink="/home" style="background-color: rgb(131, 65, 65);">Home</a>
+    </ng-container>
+    <ng-template #noHome>
+        
+    </ng-template>
+   
+    <a routerLink="/ranks">Ranks</a>
+    <a routerLink="/vote">Vote</a>
+    <ng-container *ngIf="this.user.length; else noHome3">
+        <a routerLink="/graph">Graph</a>
+    </ng-container>
+    <ng-template #noHome3>
+        
+    </ng-template>
+
+    <ng-container *ngIf="this.user.length; else noHome2">
+        
+    </ng-container>
+    <ng-template #noHome2>
+        <a routerLink="/register">Register</a>
+    </ng-template>
+    
+    <ng-container *ngIf="this.user.length; else noLogin">
+        <a (click)="Logout()" style="float: right;">Logout</a>
+    </ng-container>
+    <ng-template #noLogin>
+        <a routerLink="/login">Login</a>
+    </ng-template>
+</div>

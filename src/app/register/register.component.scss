@@ -1,0 +1,31 @@
+.container {
+    width: 30%;
+    height: 70%;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.463);
+}
+.container h1 {
+    text-align: center;
+}
+.example-full-width {
+    display: block;
+    width: 50%;
+    height: auto;
+    margin: auto;
+}
+.button_reg {
+    display: block;
+    margin: 0 auto;
+}
+.register {
+    width: 100%;
+    height: auto;
+}
+.register img {
+    display: block;
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+}

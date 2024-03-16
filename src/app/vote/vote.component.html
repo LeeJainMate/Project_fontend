@@ -1,0 +1,23 @@
+<app-header></app-header>
+<br><br><br>
+<br><br><br>
+<div class="container">
+    <div class="img1" *ngIf="show && selectedImages && selectedImages.length >= 2">
+        <div class="image-container" (click)="onImageClick(0)">
+            <img [src]="selectedImages[0].image" alt="Image 1" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.463);padding: 5px;">
+        </div>
+    </div>
+
+
+    <div class="img2" *ngIf="show">
+        <img src="../../assets/images/versus_other_removebg.png" alt="">
+    </div>
+
+
+    <div class="img3" *ngIf="show && selectedImages && selectedImages.length >= 2">
+        <div class="image-container" (click)="onImageClick(1)">
+            <img [src]="selectedImages[1].image" alt="Image 1" style="box-shadow: 0 4px 8px rgba(0, 0, 0, 0.463);padding: 5px;">
+        </div>
+    </div>
+
+</div>

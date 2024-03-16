@@ -1,0 +1,22 @@
+<app-header></app-header>
+<br><br><br>
+<div class="container">
+    <div class="register">
+        <img src="../../assets/images/Register.png" alt="">
+    </div>
+    <mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label>
+        <input type="text" matInput class="form-input"  placeholder="Pornsagsongsang" #nameforregister>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input type="email" matInput class="form-input"  placeholder="Ex. pat@example.com" #emailforregister>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input type="password" matInput class="form-input"  placeholder="12345xxxx" #passowrdforregister>
+    </mat-form-field>
+    
+    <br><br>
+    <button mat-raised-button class="button_reg" color="primary" (click)="register(nameforregister.value, emailforregister.value, passowrdforregister.value)">Register</button>
+</div>
