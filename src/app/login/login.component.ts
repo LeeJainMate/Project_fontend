@@ -25,9 +25,12 @@ export class LoginComponent  {
       return;
     }else{
        this.userlogin = await this.relog.LoginUser(email, password);
-    if(this.userlogin.length > 0 ){
+    if(this.userlogin.length > 0 && this.userlogin[0].types === 'users'){
         localStorage.setItem('user', JSON.stringify(this.userlogin));
         this.router.navigate(['/home']);
+    }else if(this.userlogin.length > 0 && this.userlogin[0].types === 'admin') {
+        localStorage.setItem('admin', JSON.stringify(this.userlogin));
+        this.router.navigate(['/admin']);
     }else{
       alert("Loging failed.");
       }

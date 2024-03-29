@@ -11,16 +11,16 @@
                         [ngClass]="{'up-arrow': player.rankingtoday < player.rankingyesterday, 'down-arrow': player.rankingtoday > player.rankingyesterday}">
                         <h6 *ngIf="player.rankingyesterday && player.rankingtoday !== player.rankingyesterday">
                             <ng-container *ngIf="player.rankingtoday < player.rankingyesterday" class="arrow-container">
-                                <img src="https://media.discordapp.net/attachments/1063306270003703878/1216061406294839346/down.png?ex=65ff0470&is=65ec8f70&hm=eef8f7377ebd28846539930edd2a3fb9b3dfdb8d293e9a79f9c13c55f9819037&=&format=webp&quality=lossless&width=160&height=160"
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Eo_circle_green_arrow-up.svg/2048px-Eo_circle_green_arrow-up.svg.png"
                                     alt="Up arrow" class="arrow-icon"> {{ player.rankdifferent }}
                             </ng-container>
                             <ng-container *ngIf="player.rankingtoday > player.rankingyesterday" class="arrow-container">
-                                <img src="https://cdn-icons-png.flaticon.com/256/5548/5548156.png" alt="Down arrow"
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b7/Eo_circle_red_arrow-down.svg/2048px-Eo_circle_red_arrow-down.svg.png" alt="Down arrow"
                                     class="arrow-icon"> {{ -player.rankdifferent }}
                             </ng-container>
                         </h6>
                     </div>
-                    <span class="player-rating">Elo Rating: {{ player.score }}</span>
+                    <span class="player-rating">Score : {{ player.score }}</span>
                 </div>
             </div>
         </li>
@@ -28,30 +28,5 @@
 </div>
 
 
-<!-- <div class="container">
-    <h2 class="slide-up">Top 10 Ranking</h2>
-    <ul class="player-list" *ngIf="Users">
-        <li class="player-item" *ngFor="let player of rank; let i = index">
-            <div class="player-details">
-                <span class="player-position">{{ i + 1 }}</span>
-                <img [src]="player.image" alt="{{ player.name }}" class="player-image">
-                <span class="player-name">{{ player.name }}</span>
-                <div class="all"
-                    [ngClass]="{'up-arrow': player.rankingtoday < player.rankingyesterday, 'down-arrow': player.rankingtoday > player.rankingyesterday}">
-                    <h6 *ngIf="player.rankingyesterday && player.rankingtoday !== player.rankingyesterday">
-                        <ng-container *ngIf="player.rankingtoday < player.rankingyesterday" class="arrow-container">
-                            <img src="https://media.discordapp.net/attachments/1063306270003703878/1216061406294839346/down.png?ex=65ff0470&is=65ec8f70&hm=eef8f7377ebd28846539930edd2a3fb9b3dfdb8d293e9a79f9c13c55f9819037&=&format=webp&quality=lossless&width=160&height=160"
-                                alt="Up arrow" class="arrow-icon"> {{ player.rankdifferent }}
-                        </ng-container>
-                        <ng-container *ngIf="player.rankingtoday > player.rankingyesterday" class="arrow-container">
-                            <img src="https://cdn-icons-png.flaticon.com/256/5548/5548156.png" alt="Down arrow"
-                                class="arrow-icon"> {{ -player.rankdifferent }}
-                        </ng-container>
-                    </h6>
-                </div>
-                <span class="player-rating">Elo Rating: {{ player.score }}</span>
-            </div>
-        </li>
-    </ul>
-</div> -->
+
 
